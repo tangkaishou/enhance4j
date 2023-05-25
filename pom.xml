@@ -6,15 +6,15 @@
     <artifactId>enhance4j</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
+    <description>enhance java</description>
 
     <name>enhance4j</name>
-    <url>http://maven.apache.org</url>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <modules>
         <module>guava-demo</module>
+        <module>caffeine-demo</module>
+        <module>jackson-demo</module>
+        <module>redis-demo</module>
+        <module>reflections-demo</module>
     </modules>
 </project>
