@@ -19,5 +19,6 @@
         <module>msgpack-demo</module>
         <module>jmh-demo</module>
         <module>netty-demo</module>
+        <module>hikaricp-demo</module>
     </modules>
 </project>
