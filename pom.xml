@@ -18,5 +18,6 @@
         <module>reflections-demo</module>
         <module>msgpack-demo</module>
         <module>jmh-demo</module>
+        <module>netty-demo</module>
     </modules>
 </project>
