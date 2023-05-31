@@ -21,5 +21,7 @@
         <module>netty-demo</module>
         <module>hikaricp-demo</module>
         <module>apache-common-pool2-demo</module>
+        <module>kryo-demo</module>
+        <module>jdk-demo</module>
     </modules>
 </project>
