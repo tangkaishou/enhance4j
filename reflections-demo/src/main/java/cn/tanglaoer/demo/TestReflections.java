@@ -4,12 +4,10 @@ import cn.tanglaoer.annotation.MyAnnotation;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.reflections.Reflections;
-import org.reflections.scanners.*;
+import org.reflections.scanners.Scanners;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 
-import java.lang.annotation.Annotation;
-import java.util.Arrays;
 import java.util.Set;
 
 /**

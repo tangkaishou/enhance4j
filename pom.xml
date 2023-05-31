@@ -20,5 +20,6 @@
         <module>jmh-demo</module>
         <module>netty-demo</module>
         <module>hikaricp-demo</module>
+        <module>apache-common-pool2-demo</module>
     </modules>
 </project>
