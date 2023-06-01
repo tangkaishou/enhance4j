@@ -1,6 +1,5 @@
 package cn.tanglaoer.entity;
 
-import org.apache.commons.pool2.BasePooledObjectFactory;
 import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.PooledObjectFactory;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
@@ -22,6 +21,7 @@ public class Demo {
         ThreadLocalRandom tlr = ThreadLocalRandom.current();
         Thread.sleep(4000 + tlr.nextInt(2000));
         long end = System.currentTimeMillis();
+        this.name = name;
         System.out.println(name + "创建耗时:" + (end-start) + "ms");
     }
 
@@ -31,19 +31,6 @@ public class Demo {
 
     public void setName(String name) {
         this.name = name;
-    }
-}
-
-class SimplePooledObjectFactory extends BasePooledObjectFactory<Demo> {
-    @Override
-    public Demo create() throws Exception {
-        String name = "test" + ThreadLocalRandom.current().nextInt(100);
-        return new Demo(name);
-    }
-
-    @Override
-    public PooledObject<Demo> wrap(Demo obj) {
-        return new DefaultPooledObject<>(obj);
     }
 }
 
@@ -76,10 +63,17 @@ class DemoPooledObjectFactory implements PooledObjectFactory<Demo> {
 }
 
 class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         GenericObjectPoolConfig<Demo> config = config();
         DemoPooledObjectFactory objectFactory = new DemoPooledObjectFactory();
         GenericObjectPool<Demo> objectPool = new GenericObjectPool<>(objectFactory, config);
+        Demo obj1 = objectPool.borrowObject();
+        System.out.println("第一次申请对象：" + obj1.getName() + obj1.hashCode());
+
+        objectPool.returnObject(obj1);
+
+        Demo obj2 = objectPool.borrowObject();
+        System.out.println("第二次申请对象:" + obj2.getName() + obj2.hashCode());
 
     }
 
