@@ -74,7 +74,6 @@ class Test {
 
         Demo obj2 = objectPool.borrowObject();
         System.out.println("第二次申请对象:" + obj2.getName() + obj2.hashCode());
-
     }
 
     public static GenericObjectPoolConfig<Demo> config () {
