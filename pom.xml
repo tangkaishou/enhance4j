@@ -23,5 +23,6 @@
         <module>apache-common-pool2-demo</module>
         <module>kryo-demo</module>
         <module>jdk-demo</module>
+        <module>git-demo</module>
     </modules>
 </project>
