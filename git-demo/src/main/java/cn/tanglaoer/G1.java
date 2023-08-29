@@ -7,5 +7,6 @@ package cn.tanglaoer;
 public class G1 {
     public static void main(String[] args) {
         System.out.println("main");
+        System.out.println("wo cao");
     }
 }
