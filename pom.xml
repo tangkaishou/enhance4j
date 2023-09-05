@@ -24,5 +24,7 @@
         <module>kryo-demo</module>
         <module>jdk-demo</module>
         <module>git-demo</module>
+        <module>redission-demo</module>
+        <module>jedis-redis-demo</module>
     </modules>
 </project>
